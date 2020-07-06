@@ -1,0 +1,12 @@
+<div class="row ">
+    <div class="col-3 side-navbar">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link" id="crear" routerLink="user-crear">Crear Proyecto</a>
+            <a class="nav-link" id="proyectos" routerLink="user-proyectos">Mis Proyectos</a>
+            <a class="nav-link" id="desarrolladores" data-toggle="pill" routerLink="user-desarrolladores">Desarrolladores</a>
+        </div>
+    </div>
+    <div class="col-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

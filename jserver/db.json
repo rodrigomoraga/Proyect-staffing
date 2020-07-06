@@ -1,0 +1,57 @@
+{
+  "usuarios": [
+    {
+      "id": 0,
+      "rol": "admin",
+      "user": "usuario1",
+      "password": "abc123",
+      "nombre": "Rodrigo Moraga",
+      "habilidades": [
+        "c++",
+        "java",
+        "html",
+        "javaScript"
+      ],
+      "activo": true,
+      "estado": true
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 0,
+      "nombre": "proyecto 1",
+      "descripcion": "proyecto staffing",
+      "fechaInicio": "31/05/2020",
+      "fechaTermino": "07/06/2020",
+      "habilidades": [
+        "hmtl",
+        "css",
+        "typeScript",
+        "python"
+      ],
+      "idColaboradores": [
+        1,
+        2,
+        3
+      ],
+      "idAdmin": 0,
+      "activo": true
+    },
+    {
+      "nombre": "nuevo proyecto",
+      "habilidades": [
+        "java",
+        "c++"
+      ],
+      "activo": true,
+      "descripcion": "sdandslkadnlska",
+      "fechaInicio": "2020-06-02",
+      "fechaTermino": "2020-06-30",
+      "idColaboradores": [
+        2,
+        3
+      ],
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+<div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <form class="formulario">
+            <h3>Crear Proyectos</h3>
+            <div class="form-group">
+              <label for="titulo">Título proyecto</label>
+              <input name="nombre" class="form-control" id="titulo" [(ngModel)]="nombre">
+            </div>
+        
+            <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" class="form-control" id="descripcion" rows="4" [(ngModel)]="descripcion"></textarea>
+              </div>
+        
+            <div class="form-group">
+              <label for="requerimientos" >Requerimientos</label>
+              <input name="habilidad_juntas" class="form-control" id="requerimientos"[(ngModel)]="habilidad_juntas">
+              
+            </div>
+        
+            <div class="form-group">
+                <label for="inicio">Fecha de inicio:</label>
+                <input type="date" id="inicio" name="fechaInicio"
+                value="2020-06-02"
+                min="2020-01-01" max="2020-12-31" [(ngModel)]="fechaInicio">
+            </div>
+        
+            <div class="form-group">
+                <label for="termino">Fecha de término:</label>
+                <input type="date" id="termino" name="fechaTermino"
+                min="2020-04-21" max="2020-12-31" [(ngModel)]="fechaTermino">
+            </div>
+        
+            <button type="submit" class="btn btn-primary" (click)="crearProyecto()">Crear proyecto</button>
+          </form>
+    </div>
+
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+</div>
