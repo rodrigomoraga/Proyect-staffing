@@ -329,6 +329,6 @@
     background-color: #dc3545;
     border-color: #dc3545;
 }
-ul {
-    list-style-type: none;
+ul{
+    padding-inline-start: 0px !important;
 }
