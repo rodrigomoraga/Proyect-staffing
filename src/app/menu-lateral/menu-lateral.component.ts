@@ -7,7 +7,6 @@ import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/co
 })
 export class MenuLateralComponent implements OnInit {
 
-  @ViewChild('navlink') seleccion: ElementRef;
   element1:HTMLElement;
   element2:HTMLElement;
   element3:HTMLElement;
@@ -18,7 +17,7 @@ export class MenuLateralComponent implements OnInit {
     this.element1 = document.getElementById('crear');
     this.element2 = document.getElementById('proyectos');
     this.element3 = document.getElementById('desarrolladores');
-    this.render.addClass(this.element1,'active'); 
+    this.render.addClass(this.element2,'active'); 
   }
   public activarItem(numero:number){
     if(numero == 1){
