@@ -18,7 +18,7 @@ export class MenuLateralComponent implements OnInit {
     this.element1 = document.getElementById('crear');
     this.element2 = document.getElementById('proyectos');
     this.element3 = document.getElementById('desarrolladores');
-    this.render.addClass(this.element1,'active'); 
+    this.render.addClass(this.element2,'active'); 
   }
   public activarItem(numero:number){
     if(numero == 1){
