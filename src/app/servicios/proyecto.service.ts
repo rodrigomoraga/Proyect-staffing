@@ -16,6 +16,6 @@ export class ProyectoService {
     return this.http.get<Proyecto[]>("http://localhost:3000/proyectos");
   }
   eliminarProyecto(proyecto:Proyecto){
-    return this.http.delete("http://localhost/proyectos?nombre="+proyecto.nombre);
+    return this.http.delete("http://localhost:3000/proyectos?nombre="+proyecto.nombre);
   }
 }
