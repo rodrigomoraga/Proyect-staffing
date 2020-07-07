@@ -19,6 +19,7 @@ import { UserAddColabComponent } from './usuario/user-add-colab/user-add-colab.c
 import { UserBienvenidaComponent } from './usuario/user-bienvenida/user-bienvenida.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
