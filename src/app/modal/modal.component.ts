@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '../servicios/usuario.service';
-import { Router } from '@angular/router';
-
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -27,10 +26,10 @@ export class ModalComponent implements OnInit {
       data => {
         if( data.length != 0 && data[0].rol == "admin"){        
           localStorage.setItem( "user", JSON.stringify(data[0]) );
-          this.router.navigateByUrl( "/privado/user-proyectos" );
+          this.router.navigateByUrl( "/privado/admin/user-proyectos" );
         }else if(data.length != 0 && data[0].rol == "colab"){
           localStorage.setItem( "user", JSON.stringify(data[0]) );
-          
+          this.router.navigateByUrl( "/privado/colab/user-desarrolladores" );          
         }else{
           alert( "error1" );
         }
