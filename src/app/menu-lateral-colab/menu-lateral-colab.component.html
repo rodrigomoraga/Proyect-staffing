@@ -1,8 +1,8 @@
 <div class="row ">
     <div class="col-3 side-navbar">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link" id="proyectos" routerLink="user-proyectos">Mis Proyectos</a>
-            <a class="nav-link" id="desarrolladores" data-toggle="pill" routerLink="user-desarrolladores">Desarrolladores</a>
+            <a (click)="activarItem(2)" class="nav-link" id="proyectos" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" routerLink="user-proyectos">Mis Proyectos</a>
+            <a (click)="activarItem(3)" class="nav-link" id="desarrolladores" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false" routerLink="user-desarrolladores">Desarrolladores</a>
         </div>
     </div>
     <div class="col-9">
