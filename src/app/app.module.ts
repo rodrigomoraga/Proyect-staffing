@@ -17,6 +17,8 @@ import { UserProyectosComponent } from './usuario/user-proyectos/user-proyectos.
 import { UserDesarrolladoresComponent } from './usuario/user-desarrolladores/user-desarrolladores.component';
 import { UserAddColabComponent } from './usuario/user-add-colab/user-add-colab.component';
 import { UserBienvenidaComponent } from './usuario/user-bienvenida/user-bienvenida.component';
+import { MenuLateralColabComponent } from './menu-lateral-colab/menu-lateral-colab.component';
+
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import { UserBienvenidaComponent } from './usuario/user-bienvenida/user-bienveni
     UserProyectosComponent,
     UserDesarrolladoresComponent,
     UserAddColabComponent,
-    UserBienvenidaComponent
+    UserBienvenidaComponent,
+    MenuLateralColabComponent
   ],
   imports: [
     BrowserModule,

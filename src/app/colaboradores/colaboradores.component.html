@@ -3,131 +3,30 @@
     <h2>Colaboradores</h2>
     <div class="row centrado">
 
-      <div class="col-lg-4">
+      <div *ngFor="let user of colaboradores" class="col-lg-4">
         <div class="panel panel-default userlist">
           <div class="panel-body text-center">
             <div class="userprofile">
               <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="userpicimg"> </div>
-              <h3 class="username">Usuario 1</h3>
-              <p>New York, USA</p>
+              <h3 class="username">{{user.nombre}}</h3>
+              <p>{{user.estado}}</p>
             </div>
             <div class="aptitudes">
               <strong>Aptitudes</strong><br>
-              
-              <li>HTML y CSS</li>
-              <li>Javascript</li>
-              <li>C#</li>
-              <li>PHP</li>
+              <ul>
+                <p *ngFor ="let habilidad of user.habilidades">{{habilidad}}</p>
+              </ul>
               <br>
             </div>
             <p>
-            <a href="mailto:maildeprueba@gmail.com">maildeprueba@gmail.com</a> | +56 9 1234 5678 </p>
-            <div class="socials tex-center"> <a href="" class="btn btn-circle btn-primary "><i class="fa fa-facebook"></i></a> <a href="" class="btn btn-circle btn-danger "><i class="fa fa-google-plus"></i></a> <a href="" class="btn btn-circle btn-info "><i class="fa fa-twitter"></i></a> <a href="" class="btn btn-circle btn-warning "><i class="fa fa-envelope"></i></a> </div>
-          </div>
-          <div class="panel-footer"> <a href="" class="btn btn-link">Ver perfil</a></div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-          <div class="panel panel-default userlist">
-            <div class="panel-body text-center">
-              <div class="userprofile">
-                <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="userpicimg"> </div>
-                <h3 class="username">Usuario 2</h3>
-                <p>New York, USA</p>
-              </div>
-              <div class="aptitudes">
-              <strong>Aptitudes</strong><br>
-              
-                <li>HTML y CSS</li>
-                <li>Javascript</li>
-                <li>C#</li>
-                <li>PHP</li>
-                <br>
-              </div>
-              <p>
-              <a href="mailto:maildeprueba@gmail.com">maildeprueba@gmail.com</a> | +56 9 1234 5678 </p>
-              <div class="socials tex-center"> <a href="" class="btn btn-circle btn-primary "><i class="fa fa-facebook"></i></a> <a href="" class="btn btn-circle btn-danger "><i class="fa fa-google-plus"></i></a> <a href="" class="btn btn-circle btn-info "><i class="fa fa-twitter"></i></a> <a href="" class="btn btn-circle btn-warning "><i class="fa fa-envelope"></i></a> </div>
-            </div>
-            <div class="panel-footer"> <a href="" class="btn btn-link">Ver perfil</a></div>
-          </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="panel panel-default userlist">
-          <div class="panel-body text-center">
-            <div class="userprofile">
-              <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="userpicimg"> </div>
-              <h3 class="username">Usuario 3</h3>
-              <p>New York, USA</p>
-            </div>
-            <div class="aptitudes">
-            <strong>Aptitudes</strong><br>
-            
-              <li>HTML y CSS</li>
-              <li>Javascript</li>
-              <li>C#</li>
-              <li>PHP</li>
-              <br>
-            </div>
-            <p>
-            <a href="mailto:maildeprueba@gmail.com">maildeprueba@gmail.com</a> | +56 9 1234 5678 </p>
-            <div class="socials tex-center"> <a href="" class="btn btn-circle btn-primary "><i class="fa fa-facebook"></i></a> <a href="" class="btn btn-circle btn-danger "><i class="fa fa-google-plus"></i></a> <a href="" class="btn btn-circle btn-info "><i class="fa fa-twitter"></i></a> <a href="" class="btn btn-circle btn-warning "><i class="fa fa-envelope"></i></a> </div>
-          </div>
-          <div class="panel-footer"> <a href="" class="btn btn-link">Ver perfil</a></div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="panel panel-default userlist">
-          <div class="panel-body text-center">
-            <div class="userprofile">
-              <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="userpicimg"> </div>
-              <h3 class="username">Usuario 4</h3>
-              <p>New York, USA</p>
-            </div>
-            <div class="aptitudes">
-            <strong>Aptitudes</strong><br>
-            
-              <li>HTML y CSS</li>
-              <li>Javascript</li>
-              <li>C#</li>
-              <li>PHP</li>
-              <br>
-            </div>
-            <p>
-            <a href="mailto:maildeprueba@gmail.com">maildeprueba@gmail.com</a> | +56 9 1234 5678 </p>
-            <div class="socials tex-center"> <a href="" class="btn btn-circle btn-primary "><i class="fa fa-facebook"></i></a> <a href="" class="btn btn-circle btn-danger "><i class="fa fa-google-plus"></i></a> <a href="" class="btn btn-circle btn-info "><i class="fa fa-twitter"></i></a> <a href="" class="btn btn-circle btn-warning "><i class="fa fa-envelope"></i></a> </div>
-          </div>
-          <div class="panel-footer"> <a href="" class="btn btn-link">Ver perfil</a></div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="panel panel-default userlist">
-          <div class="panel-body text-center">
-            <div class="userprofile">
-              <div class="userpic"> <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="" class="userpicimg"> </div>
-              <h3 class="username">Usuario 5</h3>
-              <p>New York, USA</p>
-            </div>
-            <div class="aptitudes">
-              <strong>Aptitudes</strong><br>
-            
-              <li>HTML y CSS</li>
-              <li>Javascript</li>
-              <li>C#</li>
-              <li>PHP</li>
-              <br>
-            </div>
-            <p>
-              <a href="mailto:maildeprueba@gmail.com">maildeprueba@gmail.com</a> | +56 9 1234 5678 
+              <a>{{user.user}}</a> 
             </p>
-            <div class="socials tex-center"> <a href="" class="btn btn-circle btn-primary "><i class="fa fa-facebook"></i></a> <a href="" class="btn btn-circle btn-danger "><i class="fa fa-google-plus"></i></a> <a href="" class="btn btn-circle btn-info "><i class="fa fa-twitter"></i></a> <a href="" class="btn btn-circle btn-warning "><i class="fa fa-envelope"></i></a> </div>
+            
           </div>
           <div class="panel-footer"> <a href="" class="btn btn-link">Ver perfil</a></div>
         </div>
       </div>
+
     </div>
             
   </div>

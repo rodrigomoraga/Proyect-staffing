@@ -1,0 +1,14 @@
+.button {
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  background-color: dodgerblue;
+}
+
+.nav-link {
+  color: white;
+}
+
+.row {
+  background-color: gray !important;
+}

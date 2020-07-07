@@ -9,19 +9,26 @@ import { UserAddColabComponent } from './usuario/user-add-colab/user-add-colab.c
 import { UserCrearComponent } from './usuario/user-crear/user-crear.component';
 import { UserDesarrolladoresComponent } from './usuario/user-desarrolladores/user-desarrolladores.component';
 import { UserProyectosComponent } from './usuario/user-proyectos/user-proyectos.component';
-import { UserBienvenidaComponent } from './usuario/user-bienvenida/user-bienvenida.component';
+import { MenuLateralColabComponent } from './menu-lateral-colab/menu-lateral-colab.component';
 
 const routes: Routes = [
   {path:'', component:InicioComponent},
   {path:'inicio', component:InicioComponent},
   {path:'proyectos-menu', component:ProyectosMenuComponent},
   {path:'colaboradores', component:ColaboradoresComponent},
-  {path:'privado', component:MenuLateralComponent,
+  {path:'privado/admin', component:MenuLateralComponent,
     children:[
       //{path:'', component:UserBienvenidaComponent},
-      {path:'user-bienvenida', component:UserBienvenidaComponent},
       {path:'user-add-colab', component:UserAddColabComponent},
       {path:'user-crear', component:UserCrearComponent},
+      {path:'user-desarrolladores', component:UserDesarrolladoresComponent},
+      {path:'user-proyectos', component:UserProyectosComponent}
+      
+    ]
+  },
+  {path:'privado/colab', component:MenuLateralColabComponent,
+    children:[
+      //{path:'', component:UserBienvenidaComponent},
       {path:'user-desarrolladores', component:UserDesarrolladoresComponent},
       {path:'user-proyectos', component:UserProyectosComponent}
       
