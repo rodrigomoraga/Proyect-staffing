@@ -20,6 +20,7 @@ import { UserBienvenidaComponent } from './usuario/user-bienvenida/user-bienveni
 import { MenuLateralColabComponent } from './menu-lateral-colab/menu-lateral-colab.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

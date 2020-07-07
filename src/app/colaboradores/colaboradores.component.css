@@ -320,7 +320,7 @@
     margin-bottom: 10px;
 }
 
-.aptitudes {
+.aptitudes ul {
     text-align: center;
 }
 
@@ -328,4 +328,7 @@
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
+}
+ul {
+    list-style-type: none;
 }

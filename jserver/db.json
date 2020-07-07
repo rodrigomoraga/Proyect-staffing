@@ -3,8 +3,8 @@
     {
       "id": 0,
       "rol": "admin",
-      "user": "usuario1",
-      "password": "abc123",
+      "user": "rodrigo.moragap@mayor.cl",
+      "password": "contraseña",
       "nombre": "Rodrigo Moraga",
       "habilidades": [
         "c++",
@@ -14,7 +14,48 @@
       ],
       "activo": true,
       "estado": true
-    }
+    },
+	{
+        "id": 1,
+        "rol": "colab",
+        "user": "joaquin.ossandon@mayor.cl",
+        "password": "contraseña",
+        "nombre": "Joaquin Ossandon",
+        "habilidades": [
+          "c#",
+          "java",
+          "python",
+          "javaScript"
+        ],
+        "activo": true,
+        "estado": true	
+	},
+	{
+        "id": 2,
+        "rol": "colab",
+        "user": "edson.contreras@mayor.cl",
+        "password": "contraseña",
+        "nombre": "Edson Contreras",
+        "habilidades": [
+          "java"
+        ],
+        "activo": true,
+        "estado": true	
+	},
+		{
+	        "id": 3,
+	        "rol": "colab",
+	        "user": "gonzalo.portilla@mayor.cl",
+	        "password": "contraseña",
+	        "nombre": "gonzalo.portilla@mayor.cl",
+	        "habilidades": [
+	          "word",
+			  "paint",
+			  "power point"
+	        ],
+	        "activo": true,
+	        "estado": true	
+		}
   ],
   "proyectos": [
     {
@@ -38,7 +79,7 @@
       "activo": true
     },
     {
-      "nombre": "nuevo proyecto",
+      "nombre": "proyeto 2",
       "habilidades": [
         "java",
         "c++"
@@ -52,6 +93,24 @@
         3
       ],
       "id": 1
+    },
+    {
+      "nombre": "proyecto 3",
+      "habilidades": [
+        "java",
+        "python",
+		"javascript"
+      ],
+      "activo": true,
+      "descripcion": "sdandslkadnlska",
+      "fechaInicio": "2020-05-01",
+      "fechaTermino": "2020-06-07",
+      "idColaboradores": [
+        2,
+        3,
+		1
+      ],
+      "id": 2
     }
   ]
 }

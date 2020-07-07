@@ -12,7 +12,7 @@ export class ProyectoService {
   crearProyecto(proyecto:Proyecto){
     return this.http.post("http://localhost:3000/proyectos", proyecto);
   }
-  obtenerProyecto(){
+  obtenerProyectos(){
     return this.http.get<Proyecto[]>("http://localhost:3000/proyectos");
   }
   eliminarProyecto(proyecto:Proyecto){
