@@ -15,7 +15,7 @@ export class MenuLateralColabComponent implements OnInit {
   ngOnInit(): void {
     this.element2 = document.getElementById('proyectos');
     this.element3 = document.getElementById('desarrolladores');
-    this.render.addClass(this.element2,'active'); 
+    this.render.addClass(this.element3,'active'); 
   }
 
   public activarItem(numero:number){
