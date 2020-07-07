@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { Usuario } from '../clases/usuario';
 import { UsuarioService } from '../servicios/usuario.service';
 import { Router } from '@angular/router';
 
@@ -20,34 +18,32 @@ export class ModalComponent implements OnInit {
   //parametros usuario
   public usuario:string;
   public clave:string;
+  constructor(private formBuilder: FormBuilder,
+    private servicio:UsuarioService,
+    private router: Router) { }
 
+  public iniciarSesion(){
+    this.servicio.login( this.usuario, this.clave ).subscribe(
+      data => {
+        if( data.length != 0 && data[0].rol == "admin"){        
+          localStorage.setItem( "user", JSON.stringify(data[0]) );
+          this.router.navigateByUrl( "/privado/user-proyectos" );
+        }else if(data.length != 0 && data[0].rol == "colab"){
+          localStorage.setItem( "user", JSON.stringify(data[0]) );
+          
+        }else{
+          alert( "error1" );
+        }
+      }, 
+      error => {
+        alert( "Ocurrio un error" );
+      }
+      
+    );
+    this.hide();
+  }
 
   
-  validarUsuario(){
-    let user:Usuario = new Usuario();
-    user.user = this.usuario;
-    user.password = this.clave;
-
-    this.servicio.buscarUsuario(user).subscribe(
-      data =>{
-        let variable:Usuario = data;
-        if(variable.nombre == user.nombre && variable.password == user.password){
-          console.log( "Inicio de sesion correcto" );
-          this.router.navigateByUrl("/privado/user-proyectos");          
-        }
-        else{
-          alert("Usuario y/o contraseña incorrecta");
-        }
-        
-      },
-      error =>{
-        alert( "ERROR!" );
-        console.log("Error", error);
-      }
-    );
-      this.hide();
-  }
-  constructor(private formBuilder: FormBuilder,private servicio:UsuarioService,private router: Router) { }
   show()
   {
     this.showModal = true; // Show-Hide Modal Check
@@ -63,10 +59,11 @@ export class ModalComponent implements OnInit {
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]]
     });
-}
+  }
+
 // convenience getter for easy access to form fields
-get f() { return this.registerForm.controls; }
-onSubmit() {
+  get f() { return this.registerForm.controls; }
+  onSubmit() {
     this.submitted = true;
     // stop here if form is invalid
     if (this.registerForm.invalid) {
@@ -76,7 +73,9 @@ onSubmit() {
     {
       this.showModal = false;
     }
-   
+  
   }
+
+
 
 }

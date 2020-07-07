@@ -7,7 +7,6 @@ import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/co
 })
 export class MenuLateralComponent implements OnInit {
 
-  @ViewChild('navlink') seleccion: ElementRef;
   element1:HTMLElement;
   element2:HTMLElement;
   element3:HTMLElement;

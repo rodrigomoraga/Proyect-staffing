@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from '../clases/proyecto';
+import { Usuario } from '../clases/usuario';
 import { ProyectoService } from '../servicios/proyecto.service';
+import { UsuarioService } from '../servicios/usuario.service';
 
 @Component({
   selector: 'app-proyectos-menu',

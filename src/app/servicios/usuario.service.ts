@@ -18,7 +18,7 @@ export class UsuarioService {
   eliminarColab(user:Usuario){
     return this.http.delete("http://localhost/usuarios?user="+user.user);
   }
-  buscarUsuario(user:Usuario){
-    return this.http.get<Usuario>("http://localhost:3000/usuarios?user="+user.user+"&password="+user.password);
+  login(username:string, password:string){
+    return this.http.get<Usuario[]>( "http://localhost:3000/usuarios?user="+username+"&password="+ password );
   }
 }
