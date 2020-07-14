@@ -10,15 +10,15 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
   crearUsuario(user:Usuario){
-    return this.http.post("http://localhost:3000/usuarios", user);
+    return this.http.post("https://proyect-staffing-jserver-kbefbqorma-ue.a.run.app/usuarios", user);
   }
   obtenerColab(){
-    return this.http.get<Usuario[]>("http://localhost:3000/usuarios?rol=colab");
+    return this.http.get<Usuario[]>("https://proyect-staffing-jserver-kbefbqorma-ue.a.run.app/usuarios?rol=colab");
   }
   eliminarColab(user:Usuario){
-    return this.http.delete("http://localhost/usuarios?user="+user.user);
+    return this.http.delete("https://proyect-staffing-jserver-kbefbqorma-ue.a.run.app/usuarios?user="+user.user);
   }
   login(username:string, password:string){
-    return this.http.get<Usuario[]>( "http://localhost:3000/usuarios?user="+username+"&password="+ password );
+    return this.http.get<Usuario[]>( "https://proyect-staffing-jserver-kbefbqorma-ue.a.run.app/usuarios?user="+username+"&password="+ password );
   }
 }
