@@ -1,6 +1,5 @@
 #Todo lo que uno no quiere que se lleve
 node_modules/
 Dockerfile
-db.json
 .git
 .gitignore

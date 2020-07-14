@@ -1,5 +1,7 @@
+# imagen base
 FROM ubuntu:14.04
 
+# Instalar Node apt-get 
 RUN sudo apt-get update \
 && apt-get install -y curl  \
 && curl -sL deb.nodesource.com/setup_10.x | bash - \
