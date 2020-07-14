@@ -9,11 +9,15 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })
+
+
 export class ModalComponent implements OnInit {
+  iniciado: boolean;
   //parametros formulario
   showModal: boolean;
   registerForm: FormGroup;
   submitted = false;
+  
   //parametros usuario
   public usuario:string;
   public clave:string;
@@ -27,11 +31,13 @@ export class ModalComponent implements OnInit {
         if( data.length != 0 && data[0].rol == "admin"){        
           localStorage.setItem( "user", JSON.stringify(data[0]) );
           this.router.navigateByUrl( "/privado/admin/user-proyectos" );
+          this.iniciado = true;
         }else if(data.length != 0 && data[0].rol == "colab"){
           localStorage.setItem( "user", JSON.stringify(data[0]) );
-          this.router.navigateByUrl( "/privado/colab/user-desarrolladores" );          
+          this.router.navigateByUrl( "/privado/colab/user-desarrolladores" );
+          this.iniciado = true;          
         }else{
-          alert( "error1" );
+          alert( "Usuario y/o contraseña incorrectos" );
         }
       }, 
       error => {
@@ -41,8 +47,11 @@ export class ModalComponent implements OnInit {
     );
     this.hide();
   }
-
-  
+  public salir(){
+    localStorage.removeItem("user");
+    this.iniciado = false;
+    this.router.navigateByUrl("/");
+  } 
   show()
   {
     this.showModal = true; // Show-Hide Modal Check
@@ -54,6 +63,11 @@ export class ModalComponent implements OnInit {
     this.showModal = false;
   }
   ngOnInit() {
+    if(localStorage.getItem("user") != null){
+      this.iniciado = true;
+    }else{
+      this.iniciado = false;
+    }
     this.registerForm = this.formBuilder.group({
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]]

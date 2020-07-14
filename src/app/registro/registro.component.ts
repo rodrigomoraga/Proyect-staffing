@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from '../clases/usuario';
 import { UsuarioService } from '../servicios/usuario.service';
 import { Router } from '@angular/router';
+  
 
 @Component({
   selector: 'app-registro',
@@ -11,7 +12,9 @@ import { Router } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private servicio:UsuarioService,private router: Router) { }
+  constructor(private formBuilder: FormBuilder,
+     private servicio:UsuarioService,
+     private router: Router) { }
   //parametros para modal registrarse
   showModal: boolean;
   registerForm: FormGroup;
@@ -40,11 +43,13 @@ export class RegistroComponent implements OnInit {
     this.servicio.crearUsuario(user).subscribe(
       data =>{
         alert( "Usuario agregado!" );
-        this.router.navigateByUrl( "/privado/user-proyectos" );
+        this.hide();
+        //this.router.navigateByUrl( "/privado/colab/user-desarrolladores");       
       },
       error =>{
         alert( "Ocurrio un error" );
         console.log("Error", error);
+        
       }
     );
   }

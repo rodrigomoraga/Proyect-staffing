@@ -4,3 +4,7 @@ form{
 h4{
     color: black;
 }
+.btn-rojo{
+    background-color: firebrick;
+    border: black;
+}

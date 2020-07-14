@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent {
   title = 'proyecto-staffing';
   showModal: boolean;
+  
   registerForm: FormGroup;
   submitted = false;
   constructor(private formBuilder: FormBuilder) { }
